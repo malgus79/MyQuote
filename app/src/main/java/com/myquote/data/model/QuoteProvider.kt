@@ -1,4 +1,4 @@
-package com.myquote.model
+package com.myquote.data.model
 
 class QuoteProvider {
 

@@ -1,11 +1,11 @@
-package com.myquote.view
+package com.myquote.ui.view
 
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.myquote.databinding.ActivityMainBinding
-import com.myquote.viewmodel.QuoteViewModel
+import com.myquote.ui.viewmodel.QuoteViewModel
 
 class MainActivity : AppCompatActivity() {
 

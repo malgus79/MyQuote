@@ -1,9 +1,9 @@
-package com.myquote.viewmodel
+package com.myquote.ui.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.myquote.model.QuoteModel
-import com.myquote.model.QuoteProvider
+import com.myquote.data.model.QuoteModel
+import com.myquote.data.model.QuoteProvider
 
 class QuoteViewModel : ViewModel() {
 

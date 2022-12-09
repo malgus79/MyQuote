@@ -1,8 +1,8 @@
 package com.myquote.data.model
 
-class QuoteProvider {
+import javax.inject.Inject
 
-    companion object {
-        var quotes: List<QuoteModel> = emptyList()
-    }
+class QuoteProvider @Inject constructor() {
+    var quotes: List<QuoteModel> = emptyList()
+
 }

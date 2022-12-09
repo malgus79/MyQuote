@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.google.dagger.hilt.android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -39,6 +41,7 @@ dependencies {
     ext.lifecycle_version = "2.5.1"
     ext.fragment_version = "1.5.5"
     ext.activity_version = "1.6.1"
+    ext.hilt_version = "2.44.2"
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
@@ -61,4 +64,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     //Corrutinas
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
+    //DaggerHilt
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
 }

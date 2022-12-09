@@ -5,6 +5,6 @@ import retrofit2.Response
 import retrofit2.http.GET
 
 interface QuoteApiClient {
-    @GET("/.Json")
-    suspend fun getAllQuotes(): Response<QuoteModel>
+    @GET("/.json")
+    suspend fun getAllQuotes(): Response<List<QuoteModel>>
 }

@@ -2,8 +2,9 @@ package com.myquote.domain
 
 import com.myquote.data.model.QuoteModel
 import com.myquote.data.model.QuoteProvider
+import javax.inject.Inject
 
-class GetRandomQuoteUseCase {
+class GetRandomQuoteUseCase @Inject constructor() {
 
     //no es suspend, porque esta en memoria, luego con BD si se usara corutinas
     operator fun invoke(): QuoteModel? {

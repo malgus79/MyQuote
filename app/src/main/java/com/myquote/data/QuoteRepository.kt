@@ -1,6 +1,7 @@
 package com.myquote.data
 
 import com.myquote.data.database.dao.QuoteDao
+import com.myquote.data.database.entities.QuoteEntity
 import com.myquote.data.network.QuoteService
 import com.myquote.domain.model.Quote
 import com.myquote.domain.model.toDomain
@@ -20,5 +21,9 @@ class QuoteRepository @Inject constructor(
     suspend fun getAllQuotesFromDatabase(): List<Quote> {
         val response = quoteDao.getAllQuotes()
         return response.map { it.toDomain() }
+    }
+
+    suspend fun insertQuotes(quote: List<QuoteEntity>) {
+        quoteDao.insertAll(quote)
     }
 }

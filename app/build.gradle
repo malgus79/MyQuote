@@ -38,10 +38,13 @@ android {
 }
 
 dependencies {
-    ext.lifecycle_version = "2.5.1"
-    ext.fragment_version = "1.5.5"
-    ext.activity_version = "1.6.1"
-    ext.hilt_version = "2.44.2"
+    ext {
+        lifecycle_version = "2.5.1"
+        fragment_version = "1.5.5"
+        activity_version = "1.6.1"
+        hilt_version = "2.44.2"
+        room_version = "2.4.3"
+    }
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
@@ -67,4 +70,8 @@ dependencies {
     //DaggerHilt
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+    //Romm
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation"androidx.room:room-ktx:$room_version"
 }

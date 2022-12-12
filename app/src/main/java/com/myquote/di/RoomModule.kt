@@ -19,7 +19,7 @@ object RoomModule {
     @Singleton
     @Provides
     fun provideRoom(@ApplicationContext context: Context) =
-        Room.databaseBuilder(context, QuoteDatabase::class.java, QUOTE_DATABASE_NAME)
+        Room.databaseBuilder(context, QuoteDatabase::class.java, QUOTE_DATABASE_NAME).build()
 
     @Singleton
     @Provides
